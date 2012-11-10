@@ -92,7 +92,7 @@ function FirstView() {
 		image : 'images/IMG_4028.png',
 	});
 
-	Titanium.Facebook.appid = "495338853813822";
+	Titanium.Facebook.appid = "456185811089908";
 	Titanium.Facebook.permissions = ['publish_stream', 'read_stream'];
 	//FBボタン
 	var facebook_button = Titanium.Facebook.createLoginButton({
@@ -122,10 +122,20 @@ function FirstView() {
 	//ボタンクリックで画面遷移
 	aButton.addEventListener('click', function() {
 		//alert('\'aButton\' was clicked!');
-		// Ti.UI.currentWindow.open(Ti.UI.createWindow({url: "winTop.js"}));
 		tabGroup.open();
+		Ti.Facebook.requestWithGraphPath(
+			'me',
+			{},
+			"GET",
+			function(e){
+				if (e.success) {
+					var obj = JSON.parse(e.result);
+					alert(obj.name + "時間を記入しましょう");
+				}
+			}
+		);
 	});
-	Ti.API.info('hoge');
+
 	//FBログイン
 	Titanium.Facebook.addEventListener('login', function() {
 		//label.text = 'Logged In = ' + Titanium.Facebook.loggedIn;
@@ -135,6 +145,10 @@ function FirstView() {
 		//label.text = 'Logged In = ' + Titanium.Facebook.loggedIn;
 		aButton.hide();
 	});
+	if(Ti.Facebook.loggedIn){
+		aButton.show();
+	};
+	
 	return self;
 }
 
