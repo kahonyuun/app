@@ -75,6 +75,7 @@ function FirstView() {
 	//最初に表示するページ
 	tabGroup.setActiveTab(2);
 	//なぜ３ではなく２なのかは謎でつ！
+	//試しに0を入れてみるとわかる @kyohei
 
 	//TOPページボタン
 	var aButton = Ti.UI.createButton({
