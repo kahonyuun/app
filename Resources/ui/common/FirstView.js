@@ -15,17 +15,17 @@ function FirstView() {
 
 	//Tab1
 	var winMeet = Ti.UI.createWindow({
-		url : "meet.js"
+		url : "ui/common/meet.js"
 	});
 	var tabMeet = Titanium.UI.createTab({
 		window : winMeet,
-		icon : 'KS_nav_views.png',
+		icon : 'ui/common/KS_nav_views.png',
 		title : 'MEET!',
 	});
 
 	//Tab2
 	var winBye = Ti.UI.createWindow({
-		url : "bye.js"
+		url : "ui/common/bye.js"
 	});
 	var tabBye = Titanium.UI.createTab({
 		window : winBye,
@@ -35,7 +35,7 @@ function FirstView() {
 
 	//Tab3
 	var winTop = Ti.UI.createWindow({
-		url : "WinTop.js"
+		url : "ui/common/WinTop.js"
 	});
 	var tabTop = Ti.UI.createTab({
 		window : winTop,
@@ -45,7 +45,7 @@ function FirstView() {
 
 	//Tab4
 	var winLog = Ti.UI.createWindow({
-		url : "log.js"
+		url : "ui/common/log.js"
 	});
 	var tabLog = Titanium.UI.createTab({
 		window : winLog,
@@ -55,7 +55,7 @@ function FirstView() {
 
 	//Tab5
 	var winSetting = Ti.UI.createWindow({
-		url : "setting.js"
+		url : "ui/common/setting.js"
 	});
 	var tabSetting = Titanium.UI.createTab({
 		window : winSetting,
