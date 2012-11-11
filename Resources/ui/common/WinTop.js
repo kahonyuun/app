@@ -3,13 +3,8 @@ var myself = Ti.UI.currentWindow;
 myself.barColor = 'black';
 myself.backgroundColor = "#eea2b5";
 
-var viewUp = Ti.UI.createView({
-	backgroundColor : "#29373a",
-	top : "0%",
-	width : "100%",
-	height : 200,
-	layout : 'vertical',
-});
+var Graph = require('ui/common/Graph');
+var viewUp = new Graph();
 myself.add(viewUp);
 
 var view2 = Ti.UI.createView({
